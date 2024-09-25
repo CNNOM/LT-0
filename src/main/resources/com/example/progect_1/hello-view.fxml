@@ -8,6 +8,10 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import com.sun.org.apache.xpath.internal.operations.String?>
+<?import java.lang.Integer?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.progect_1.HelloController">
   <padding>
@@ -25,6 +29,14 @@
   </HBox>
   <HBox>
     <Button text="onCountSum!" onAction="#onCountSum"/>
+    <ComboBox fx:id="percentComboBox" prefWidth="100">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <Integer fx:value="10"/>
+          <Integer fx:value="9"/>
+        </FXCollections>
+      </items>
+    </ComboBox>
     <Label  fx:id="onCountSum" />
   </HBox>
   <HBox>

@@ -3,6 +3,7 @@ package com.example.progect_1;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.beans.binding.Bindings;
@@ -16,6 +17,9 @@ public class HelloController {
     private TextField sumInput;
 
     @FXML
+    private ComboBox<Integer> percentComboBox;
+
+    @FXML
     protected void onCountPr() {
         float sum = Float.parseFloat(sumInput.getText());
         Procent f1 = new Procent(sum);
@@ -26,7 +30,9 @@ public class HelloController {
     protected void onCountSum() {
         float sum = Float.parseFloat(sumInput.getText());
         Procent f1 = new Procent(sum);
-        onCountSum.setText("" + f1.countSum(100, 10));
+        int selectedPercent = percentComboBox.getValue();
+        float result = f1.countSumrnd(selectedPercent);
+        onCountSum.setText(String.valueOf(result));
     }
 
     @FXML
