@@ -29,7 +29,7 @@
   </HBox>
   <HBox>
     <Button text="onCountSum!" onAction="#onCountSum"/>
-    <ComboBox fx:id="percentComboBox" prefWidth="100">
+    <ComboBox fx:id="percentComboBox">
       <items>
         <FXCollections fx:factory="observableArrayList">
           <Integer fx:value="10"/>
